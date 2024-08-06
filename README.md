@@ -18,7 +18,13 @@ Experimental results demonstrate that ***CodeACT-DeepSeek-Coder-6.7B***, fine-tu
 <img alt="image" src='assets/CDAS.png'>
 </div>
 
-An overviw of our proposed CDAS method, including three steps from top to bottom. Step 1: Clustering the EVOL-Instruct dataset to form multiple clusters. Step 2: Computing the Instruction-Following Difficulty score by comparing the model's perplexity with and without instructions. Step 3: Sampling the top m\% instances from each re-ranked cluster to form a high-complexity sub-dataset that preserves data diversity. Finally, we use the selected data for fine-tuning to obtain CodeACT-Coder.
+An overviw of our proposed CDAS method, including three steps from top to bottom. 
+
+* Step 1: Clustering the EVOL-Instruct dataset to form multiple clusters. 
+* Step 2: Computing the Instruction-Following Difficulty score by comparing the model's perplexity with and without instructions. 
+* Step 3: Sampling the top m\% instances from each re-ranked cluster to form a high-complexity sub-dataset that preserves data diversity. 
+
+Finally, we use the selected data for fine-tuning to obtain CodeACT-Coder.
 
 ### Dynamic Pack
 
@@ -26,7 +32,10 @@ An overviw of our proposed CDAS method, including three steps from top to bottom
 <img alt="image" src='assets/DynamicPack.png'>
 </div>
 
-Illustration of different padding strategies, where the blank squares represent padding tokens. Top: Traditional padding strategy aligns samples to the model's maximum input length, resulting in high computational resource consumption. Middle: Dynamic padding strategy reduces the number of padding tokens by aligning samples to the length of the longest sample in each batch. Bottom: Our proposed Dynamic Pack strategy sorts samples by length and concatenates multiple samples within a batch, further optimizing the utilization of the model's maximum input length and reducing padding tokens.
+Illustration of different padding strategies, where the blank squares represent padding tokens. 
+* Top: Traditional padding strategy aligns samples to the model's maximum input length, resulting in high computational resource consumption. 
+* Middle: Dynamic padding strategy reduces the number of padding tokens by aligning samples to the length of the longest sample in each batch. 
+* Bottom: Our proposed Dynamic Pack strategy sorts samples by length and concatenates multiple samples within a batch, further optimizing the utilization of the model's maximum input length and reducing padding tokens.
 
 ## Results
 
